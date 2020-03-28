@@ -1,11 +1,12 @@
-let counter
+let counter = 0
 
-const init = () => {
-   if(!localStorage.getItem("counter"))  
-   localStorage.setItem("counter", 0);
+const init = (add, calback) => {
+   if(!localStorage.getItem("counter")){
+      localStorage.setItem("counter", 0)
+   }
 
-   counter = localStorage.getItem("counter")
-   counterHTML.innerHTML = counter
+   localStorage.counter = Number(localStorage.counter) + add
+   calback(localStorage.counter)
 }
 
 
@@ -13,11 +14,14 @@ const counterHTML = document.getElementById("counter")
 const add = document.getElementById("inc")
 const rest = document.getElementById("rest")
 
-init()
+init(0, (data) => {
+    counterHTML.innerHTML = data
+})
 
 add.addEventListener('click', () => {
-    counter = ++localStorage.counter 
-    init() 
+    init(1, (data) => {
+        counterHTML.innerHTML = data
+    })
 })
 
 rest.addEventListener('click', () => {
