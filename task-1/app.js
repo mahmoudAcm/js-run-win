@@ -29,6 +29,3 @@ rest.addEventListener('click', () => {
         localStorage.removeItem("counter")
     counterHTML.innerHTML = 0 
 })
-
-
-
