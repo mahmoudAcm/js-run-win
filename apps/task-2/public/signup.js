@@ -33,6 +33,7 @@ signup.addEventListener('submit', async (e) =>{
          }
       } else {
          alert('success!')
+         window.location.replace("/login.html");
       }
     
       

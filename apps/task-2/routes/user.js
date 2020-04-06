@@ -16,9 +16,8 @@ app.post('/signup', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     try{
-        console.log(req.body) 
-        await User.findByCredentilas(req.body.email, req.body.password) 
-        res.send({message:"you can login"})
+        const user = await User.findByCredentilas(req.body.email, req.body.password) 
+        res.send(user)
     } catch(e){
         res.status(404).send(e)
     }

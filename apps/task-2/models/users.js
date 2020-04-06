@@ -29,10 +29,10 @@ const userSchema = new mongoose.Schema({
 
 userSchema.statics.findByCredentilas = async (email, password) =>{
     const user = await User.findOne({email})
-    if(!user) throw new Error('wrong email')
+    if(!user) throw {msg: 'Email isn\'t found'} 
 
     const match = user.password === password
-    if(!match) throw new Error('wrong password')
+    if(!match) throw {msg: 'password is not right'} 
 
     return user
 }

@@ -3,6 +3,7 @@
 <head>
 <title>Login</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="login.js" rel="script">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--web-fonts-->
 <body>
@@ -19,21 +20,20 @@
 
 						<div class="login-middle">
 							<p>Log in with your email and password</p>
-							<form>
-								<input type="text" placeholder="Name">
-								<input type="password" placeholder="Password">
+							<form id="login">
+								<input type="email" placeholder="Name" name="email">
+								<input type="password" placeholder="Password" name="password">
+								<div class="login-bottom" style="margin-top: 20px;"> 
+									<div class="login-left">
+										<a href="/signup.html">Sign Up Now!</a>
+									</div>
+									<div class="login-right">
+										<input type="submit" value="Login" name="submit">
+									</div>
+								</div>
 							</form>
 						</div>
-						<div class="login-bottom">
-							<div class="login-left">
-								<a href="#">Sign Up Now!</a>
-							</div>
-							<div class="login-right">
-								<form>
-								<input type="submit" value="Login">
-								</form>
-							</div>
-						</div>
+	
 					</div>
 				</div>
 			</div>
@@ -42,4 +42,5 @@
 
 		<!---main--->
 </body>
+<script src="login.js"></script>
 </html>
