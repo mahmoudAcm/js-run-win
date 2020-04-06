@@ -3,6 +3,7 @@
 <head>
 <title>SignUp</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="app.js" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--web-fonts-->
 <body>
@@ -19,19 +20,18 @@
 
 						<div class="login-middle">
 							<p>SignUp to Login</p>
-							<form>
-                                <input type="text" placeholder="Name" required>
-                                <input type="email" placeholder="Email" required>
-								<input type="password" placeholder="Password" required>
+							<form  id="SignUp">
+                                <input type="text" placeholder="Name" name="name" required>
+                                <input type="email" placeholder="Email" name="email" required>
+								<input type="password" placeholder="Password" name="password" required>
+								<div class="login-bottom" style="margin-top: 20px;">
+									<div class="login-right">
+										<input type="submit" value="SignUp">
+									</div>
+								</div>
 							</form>
 						</div>
-						<div class="login-bottom">
-							<div class="login-right">
-								<form>
-								<input type="submit" value="SignUp">
-								</form>
-							</div>
-						</div>
+
 					</div>
 				</div>
 			</div>
@@ -40,4 +40,5 @@
 
 		<!---main--->
 </body>
+<script src="app.js"></script>
 </html>
