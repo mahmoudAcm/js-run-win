@@ -1,14 +1,13 @@
 const signup = document.getElementById("SignUp") 
 
 const submit = () => {
-    let inputs = document.getElementsByTagName("input")
-    const keys = Object.values(inputs)
-    let data = {} 
-    keys.forEach((input) => {
-        if(input["namee"] !== "submit")
-        data[input["name"]] = input["value"]
-    });
-    return JSON.stringify(data)
+  let data = {} 
+  elem(".userdata", (login) => {
+      login.forEach((input) => {
+          data[input["name"]] = input["value"]
+      })
+  })
+  return JSON.stringify(data)
 }
 
 signup.addEventListener('submit', async (e) =>{

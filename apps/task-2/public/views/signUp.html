@@ -2,8 +2,9 @@
 <html>
 <head>
 <title>SignUp</title>
-<link href="style.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="signup.js" rel="script">
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../js/utils/extract.js" rel="script">
+<link href="../js/signup.js" rel="script">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!--web-fonts-->
 <body>
@@ -21,9 +22,9 @@
 						<div class="login-middle">
 							<p>SignUp to Login</p>
 							<form  id="SignUp">
-                                <input type="text" placeholder="Name" name="name" required>
-                                <input type="email" placeholder="Email" name="email" required>
-								<input type="password" placeholder="Password" name="password" required>
+                                <input class="userdata" type="text" placeholder="Name" name="name" required>
+                                <input class="userdata" type="email" placeholder="Email" name="email" required>
+								<input class="userdata" type="password" placeholder="Password" name="password" required>
 								<div class="login-bottom" style="margin-top: 20px;">
 									<div class="login-right">
 										<input type="submit" value="SignUp">
@@ -40,5 +41,6 @@
 
 		<!---main--->
 </body>
-<script src="signup.js"></script>
+<script src="../js/utils/extract.js"></script>
+<script src="../js/signup.js"></script>
 </html>

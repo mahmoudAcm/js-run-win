@@ -2,13 +2,12 @@ const login = document.getElementById("login")
 
 
 const getAccount = () => {
-    let inputs = document.getElementsByTagName("input")
-    const keys = Object.values(inputs)
     let data = {} 
-    keys.forEach((input) => {
-        if(input["name"] !== "submit")
-        data[input["name"]] = input["value"]
-    });
+    elem(".userdata", (login) => {
+        login.forEach((input) => {
+            data[input["name"]] = input["value"]
+        })
+    })
     return JSON.stringify(data)
 }
 
