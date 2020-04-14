@@ -5,4 +5,5 @@
 <p>This is a basic signUp and login backend using mongodb as our database and you can download it locally but you need mongodb server up on running</p>
 
 # <a href="https://github.com/mahmoudAcm/js-run-win/tree/master/apps/task-3">task three</a>
-<p>This is a control panal for products any type of product</p>
+<p>This is a control panal for products any type of product, also you can search by any field and search using more than feild at the same time also
+</p>
