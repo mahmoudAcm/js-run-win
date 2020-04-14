@@ -50,7 +50,7 @@ e.preventDefault() ;
 
     const success = await res.json()
     if(success){
-        alert('data has been insert')
+        alert('data has been inserted')
         insertProducts.reset()    
     }
 })
