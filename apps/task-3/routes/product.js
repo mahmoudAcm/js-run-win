@@ -23,6 +23,16 @@ Router.get('/products', async (req, res) => {
     }
 })
 
+Router.post('/product/search', async (req, res) => {
+  try{
+      const read = await products.find(req.body)
+      res.send(read)
+  } catch(e){
+      res.send(500).send(e)
+  }
+})
+
+
 Router.post('/product/:id', async (req, res) => {
       try{
         await products.updateProduct(req.params.id, req.body)

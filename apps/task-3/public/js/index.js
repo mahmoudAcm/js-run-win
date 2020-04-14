@@ -2,6 +2,7 @@ const tabOne = document.getElementById("tab-1")
 const tabTwo = document.getElementById("tab-2")
 const insertProducts = document.getElementById("insertProducts")
 const updateProducts = document.getElementById("updateProducts")
+const searchProducts = document.getElementById("searchProducts")
 
 tabOne.addEventListener('click', () => {
     elem("#insert", (insert) =>{
@@ -56,6 +57,31 @@ e.preventDefault() ;
 })
 
 
+searchProducts.addEventListener('submit', async (e) =>{
+    e.preventDefault() ;
+          let data = {}      
+          elem('.userdata3', (input) => {
+              input.forEach((key) => {
+                  if(key.value)
+                  data[key.name] = key.value
+              })
+          })
+
+    
+        const res = await fetch(`/product/search`, {
+            method:"post",
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body:JSON.stringify(data)
+        })
+    
+        const success = await res.json()
+        if(success){
+            console.log(success)
+            await renderView(success)
+        }
+})
 
 updateProducts.addEventListener('submit', async (e) =>{
     e.preventDefault() ;
