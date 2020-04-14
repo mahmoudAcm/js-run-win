@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+<title>Products Controll panal</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="js/utils/extract.js" rel="script">
+<link href="js/index.js" rel="script">
+<meta name="robots" content="noindex">
+<body >
+	<h1>Products</h1>
+	<div class="container" style="border-radius: 10px;">
+
+		<div class="tabs">
+
+			<div class="sap_tabs">
+
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+
+					<ul class="resp-tabs-list">
+						<li class="resp-tab-item" id="tab-1"  role="tab"><h2><span>Insert products</span></h2></li>
+                        <li class="resp-tab-item" id="tab-2" role="tab"><span>view Products</span></li>
+                        <div class="clear"></div>
+                    </ul>
+                    
+
+                    <div id="view" hidden style="overflow-x:auto;"><table id="viewProducts" ></table>
+                        <div id="update" hidden>
+                            <div class="login-middle">
+                                <form id="updateProducts">
+                                            <input type="text" placeholder="id" id="up" hidden> 
+                                            <input class="userdata2" type="text" placeholder="name" name="name">
+                                            <input class="userdata2" type="text" placeholder="amount" name="amount">
+                                            <input class="userdata2" type="text" placeholder="price" name="price">
+                                            <input class="userdata2" type="text" placeholder="desription" name="desription">
+                                    <div class="login-bottom" style="margin-top: 20px;"> 
+                                        <div class="login-right">
+                                            <input type="submit" value="Update" name="submit">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        <div>
+    
+                        </div>
+                    </div>
+                </div>
+                    <div id="insert">
+                        <div class="login-middle">
+							<form id="insertProducts">
+                                        <input class="userdata" type="text" placeholder="name" name="name" required>
+                                        <input class="userdata" type="text" placeholder="amount" name="amount" required>
+                                        <input class="userdata" type="text" placeholder="price" name="price" required>
+                                        <input class="userdata" type="text" placeholder="desription" name="desription" required>
+								<div class="login-bottom" style="margin-top: 20px;"> 
+									<div class="login-right">
+										<input type="submit" value="Insert" name="submit">
+									</div>
+								</div>
+							</form>
+						</div>
+                    </div>
+
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/utils/extract.js"></script>
+<script src="js/index.js"></script>
+</html>

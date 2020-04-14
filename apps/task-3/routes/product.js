@@ -23,9 +23,10 @@ Router.get('/products', async (req, res) => {
     }
 })
 
-Router.patch('/product/:id', async (req, res) => {
+Router.post('/product/:id', async (req, res) => {
       try{
-        const product = await products.updateProduct(req.params.id, req.body)
+        await products.updateProduct(req.params.id, req.body)
+        const product = await products.find({})
         res.send(product)
       } catch(e){
         res.status(404).send(e)    
